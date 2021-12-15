@@ -115,12 +115,4 @@ class MockPDO extends PDO
 
         return $this->_mock_pdo_statement->_mock_set_fetch("0");
     }
-
-    public function __destruct()
-    {
-        foreach ($this->current as $k => $v) {
-            unset(self::$data[$k]);
-            unset($this->current[$k]);
-        }
-    }
 }
